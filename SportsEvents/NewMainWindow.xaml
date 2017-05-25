@@ -1,0 +1,19 @@
+﻿<Window x:Class="SportsEvents.NewMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SportsEvents"
+        mc:Ignorable="d"
+        Title="NewMainWindow" Height="204.217" Width="300">
+    <Grid Background="Aqua" Margin="0,0,0,1">
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="23" Margin="82,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Название" VerticalAlignment="Top" Height="23" Width="67"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="Цена" VerticalAlignment="Top" Height="23" Width="67"/>
+        <TextBox x:Name="textBoxPrice" HorizontalAlignment="Left" Height="23" Margin="82,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="textBoxCountry" HorizontalAlignment="Left" Height="23" Margin="82,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,66,0,0" TextWrapping="Wrap" Text="Страна" VerticalAlignment="Top" Height="23" Width="67"/>
+        <Button x:Name="buttonAdd" Content="Добавить" HorizontalAlignment="Left" Margin="97,115,0,0" VerticalAlignment="Top" Width="108" Height="41" Click="buttonAdd_Click"/>
+
+    </Grid>
+</Window>
