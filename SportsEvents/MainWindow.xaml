@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid Background="Indigo">
-        <ListBox x:Name="listBoxEvents" HorizontalAlignment="Left" Height="249" Margin="10,10,0,0" VerticalAlignment="Top" Width="497">
+        <ListBox x:Name="listBoxEvents" HorizontalAlignment="Left" Height="218" Margin="10,41,0,0" VerticalAlignment="Top" Width="497">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Info}"></TextBlock>
@@ -19,6 +19,7 @@
         <Button x:Name="buttonAdd" Content="Добавить" HorizontalAlignment="Left" Margin="10,264,0,0" VerticalAlignment="Top" Width="151" Height="46" Click="buttonAdd_Click"/>
         <Button x:Name="buttonEdit" Content="Редактировать" HorizontalAlignment="Left" Margin="187,264,0,0" VerticalAlignment="Top" Width="150" Height="46" Click="buttonEdit_Click"/>
         <Button x:Name="buttonRemove" Content="Удалить" HorizontalAlignment="Left" Margin="357,264,0,0" VerticalAlignment="Top" Width="150" Height="46" Click="buttonRemove_Click"/>
+        <TextBox x:Name="TextBoxSearch" HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="497" TextChanged="TextBoxSearch_TextChanged"/>
 
     </Grid>
 </Window>

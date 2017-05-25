@@ -104,5 +104,31 @@ namespace SportsEvents
                 RefreshListBox();
             }
         }
+
+        private void TextBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string text = TextBoxSearch.Text;
+            if(text == "")
+            {
+                listBoxEvents.ItemsSource = _Events;
+            }
+             else
+            {
+                listBoxEvents.ItemsSource = SearchEvent(text);
+            }
+        }
+
+        public List<Event> SearchEvent(string input)
+        {
+            List<Event> tmp = new List<Event>();
+            foreach(var item in _Events)
+            {
+                if(input == item.Name || input == item.Country)
+                {
+                    tmp.Add(item);
+                }
+            }
+            return tmp;
+        }
     }
 }
