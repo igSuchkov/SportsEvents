@@ -86,12 +86,19 @@ namespace SportsEvents
         private void buttonEdit_Click(object sender, RoutedEventArgs e)
         {
             List<Event> events = _Events;
+            try
+            {
             var Event = _Events[listBoxEvents.SelectedIndex];
             var window = new EditWindow(Event, events);
             if (window.ShowDialog().Value)
             {
                 SaveData();
                 RefreshListBox();
+            }
+            }
+            catch
+            {
+                MessageBox.Show("Необходимо выбрать событие для исправления");
             }
         }
 

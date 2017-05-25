@@ -38,6 +38,32 @@ namespace SportsEvents
 
         private void buttonEdit_Click(object sender, RoutedEventArgs e)
         {
+            int price;
+            if (string.IsNullOrWhiteSpace(textBoxName.Text))
+            {
+                MessageBox.Show("Необходимо ввести название события");
+                textBoxName.Focus();
+                return;
+            }
+            if (!int.TryParse(textBoxPrice.Text, out price))
+            {
+                MessageBox.Show("Некорректное значение цены");
+                textBoxPrice.Focus();
+                return;
+            }
+            if (price < 0)
+            {
+                MessageBox.Show("Цена должна быть положительной");
+                textBoxPrice.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(textBoxCountry.Text))
+            {
+                MessageBox.Show("Необходимо ввести название страны");
+                textBoxCountry.Focus();
+                return;
+            }
+
             foreach (var _event in _Events)
             {
                 if (_event == Event)
